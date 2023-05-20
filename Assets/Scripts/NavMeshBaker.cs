@@ -8,6 +8,10 @@ using Unity.AI.Navigation;
 
 public class NavMeshBaker : MonoBehaviour
 {
+    // constants
+    private const string AGENT_NAME_TOPDOWN = "TopDown";
+    private const string AGENT_NAME_SIDEVIEW = "SideView";
+
     // cache
     NavMeshSurface navMeshSurface;
 
@@ -31,11 +35,11 @@ public class NavMeshBaker : MonoBehaviour
         switch (perspective)
         {
             case Perspective.XZ_TopDown:
-                navMeshSurface.agentTypeID = 0; // Topdown agent
+                navMeshSurface.agentTypeID = GetAgentTypeIDByName(AGENT_NAME_TOPDOWN);
                 break;
             case Perspective.XY_Side:
             case Perspective.YZ_Side:
-                navMeshSurface.agentTypeID = 1; // Sideview agent
+                navMeshSurface.agentTypeID = GetAgentTypeIDByName(AGENT_NAME_SIDEVIEW);
                 break;
         }
 
@@ -44,5 +48,23 @@ public class NavMeshBaker : MonoBehaviour
     private void BakeMesh()
     {
         GetComponent<NavMeshSurface>().BuildNavMesh();
+    }
+
+    // shamelessly lifted from the web as I could not find good info on Unity docs
+    // https://answers.unity.com/questions/1650130/change-agenttype-at-runtime.html
+    private int GetAgentTypeIDByName(string agentTypeName)
+    {
+        int count = NavMesh.GetSettingsCount();
+        string[] agentTypeNames = new string[count + 2];
+        for (var i = 0; i < count; i++)
+        {
+            int id = NavMesh.GetSettingsByIndex(i).agentTypeID;
+            string name = NavMesh.GetSettingsNameFromID(id);
+            if (name == agentTypeName)
+            {
+                return id;
+            }
+        }
+        return -1;
     }
 }
