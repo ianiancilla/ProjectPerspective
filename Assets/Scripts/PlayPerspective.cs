@@ -28,6 +28,10 @@ public class PlayPerspective : MonoBehaviour
         PlayerInput.onPerspectiveChangeInput -= ChangePerspective;
     }
 
+    private void Start()
+    {
+        ChangePerspective(Perspective.XZ_TopDown);
+    }
 
     private void ChangePerspective (Perspective newPerspective)
     {
