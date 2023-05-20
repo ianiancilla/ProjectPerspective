@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
@@ -15,7 +16,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         HandleMovement();
-        
     }
 
     private void HandleMovement()
@@ -28,50 +28,22 @@ public class Player : MonoBehaviour
             return;
         }
 
-
+        // move
         Vector3 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
+        Vector3 goalPosition = transform.position + (moveDirection * moveSpeed * Time.deltaTime);
+        Vector3 facingDirection = moveDirection;
 
-        float playerHeight = 1f;
-        float playerRadius = .35f;
-        
-        bool CanMove(Vector3 direction)
+        float maxDistance = .3f;
+        bool isValidTarget = NavMesh.SamplePosition(goalPosition, out NavMeshHit navMeshHit, maxDistance, NavMesh.AllAreas);
+
+        if (isValidTarget)
         {
-            bool canMove = !Physics.CapsuleCast(transform.position + (Vector3.up * (playerRadius / 2f)),
-                                                transform.position + Vector3.up * (playerHeight - playerRadius),
-                                                playerRadius,
-                                                direction,
-                                                moveSpeed * Time.deltaTime);
-            return canMove;
+            facingDirection = (navMeshHit.position - transform.position).normalized;
+
+            transform.position = navMeshHit.position;
         }
 
-        if (!CanMove(moveDirection))
-        {
-            // try only x movement
-            Vector3 moveX = new Vector3(moveDirection.x, 0,0).normalized;
+        transform.forward = Vector3.Slerp(transform.forward, facingDirection, Time.deltaTime * moveSpeed);
 
-            if (CanMove(moveX))
-            {
-                moveDirection = moveX;
-            }
-            else
-            {
-                // try only z movement
-                Vector3 moveZ = new Vector3(0,0,moveDirection.z).normalized;
-
-                if (CanMove(moveZ))
-                {
-                    moveDirection = moveZ;
-                }
-                else
-                {
-                    // cannot move at all
-                    Debug.Log("Player cannot move in this direction");
-                    return;
-                }
-            }
-        }
-
-        isWalking = true;
-        transform.position += moveDirection * Time.deltaTime * moveSpeed;
     }
 }
