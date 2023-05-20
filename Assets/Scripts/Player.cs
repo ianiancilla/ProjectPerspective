@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     PlayPerspective playPerspective;
     PlayerInput playerInput;
 
+    // constants
+    private const string GOAL_TAG = "Finish";
 
     // variables
     private bool isWalking = false;
@@ -69,5 +71,13 @@ public class Player : MonoBehaviour
         }
 
         transform.forward = Vector3.Slerp(transform.forward, facingDirection, Time.deltaTime * moveSpeed);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == GOAL_TAG)
+        {
+            Debug.Log("Level cleared!");
+        }
     }
 }
