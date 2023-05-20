@@ -6,13 +6,22 @@ using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] PlayerInput playerInput;
     [SerializeField] float moveSpeed = 7f;
+
+    // cache
+    PlayPerspective playPerspective;
+    PlayerInput playerInput;
+
 
     // variables
     private bool isWalking = false;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        playPerspective = FindObjectOfType<PlayPerspective>();
+        playerInput = FindObjectOfType<PlayerInput>();
+    }
+
     void Update()
     {
         HandleMovement();
@@ -28,8 +37,24 @@ public class Player : MonoBehaviour
             return;
         }
 
+        Perspective perspective = playPerspective.GetCurrentPerspective();
+
+        Vector3 moveDirection = Vector3.zero;
+
+        switch (perspective)
+        {
+            case Perspective.XZ_TopDown:
+                moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
+                break;
+            case Perspective.XY_Side:
+                moveDirection = new Vector3(-inputVector.x, 0, 0).normalized; // because camera is on the X+ side
+                break;
+            case Perspective.YZ_Side:
+                moveDirection = new Vector3(0, 0, inputVector.x).normalized;
+                break;
+        }
+ 
         // move
-        Vector3 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
         Vector3 goalPosition = transform.position + (moveDirection * moveSpeed * Time.deltaTime);
         Vector3 facingDirection = moveDirection;
 
@@ -44,6 +69,5 @@ public class Player : MonoBehaviour
         }
 
         transform.forward = Vector3.Slerp(transform.forward, facingDirection, Time.deltaTime * moveSpeed);
-
     }
 }

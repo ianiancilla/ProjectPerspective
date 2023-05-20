@@ -2,7 +2,7 @@
     "name": "PlayerInputActions",
     "maps": [
         {
-            "name": "TopDownView",
+            "name": "Player",
             "id": "ac72a665-6d95-47d1-ba34-3dddac2396e9",
             "actions": [
                 {
@@ -13,6 +13,33 @@
                     "processors": "NormalizeVector2",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "XZ_TopDown_Activate",
+                    "type": "Button",
+                    "id": "5376fe0a-a07a-4f5f-a4a0-55c0b5a104b5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "XY_Side_Activate",
+                    "type": "Button",
+                    "id": "b0848cf7-ff8a-47e4-8b45-c055d65dbdf0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ZY_Side_Activate",
+                    "type": "Button",
+                    "id": "bacac193-1a57-4a31-b9e2-b004aeebbeea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,14 +152,52 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "50be5049-bc58-43e9-aa9c-5908f6f9a409",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1eb14d35-5a2f-4120-89bc-91725e11d3d1",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "XZ_TopDown_Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3e2a254-5a7f-4159-bc40-d9ae0137c2f7",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "XY_Side_Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a987c04e-e2ce-4316-b2b2-212763227585",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ZY_Side_Activate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "SideView",
-            "id": "637011a9-0467-40f1-a448-a199b1e1697e",
-            "actions": [],
-            "bindings": []
         }
     ],
     "controlSchemes": []

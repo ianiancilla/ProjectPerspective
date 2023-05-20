@@ -24,7 +24,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     ""name"": ""PlayerInputActions"",
     ""maps"": [
         {
-            ""name"": ""TopDownView"",
+            ""name"": ""Player"",
             ""id"": ""ac72a665-6d95-47d1-ba34-3dddac2396e9"",
             ""actions"": [
                 {
@@ -35,6 +35,33 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""XZ_TopDown_Activate"",
+                    ""type"": ""Button"",
+                    ""id"": ""5376fe0a-a07a-4f5f-a4a0-55c0b5a104b5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""XY_Side_Activate"",
+                    ""type"": ""Button"",
+                    ""id"": ""b0848cf7-ff8a-47e4-8b45-c055d65dbdf0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ZY_Side_Activate"",
+                    ""type"": ""Button"",
+                    ""id"": ""bacac193-1a57-4a31-b9e2-b004aeebbeea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -147,23 +174,62 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50be5049-bc58-43e9-aa9c-5908f6f9a409"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1eb14d35-5a2f-4120-89bc-91725e11d3d1"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""XZ_TopDown_Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3e2a254-5a7f-4159-bc40-d9ae0137c2f7"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""XY_Side_Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a987c04e-e2ce-4316-b2b2-212763227585"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ZY_Side_Activate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""SideView"",
-            ""id"": ""637011a9-0467-40f1-a448-a199b1e1697e"",
-            ""actions"": [],
-            ""bindings"": []
         }
     ],
     ""controlSchemes"": []
 }");
-        // TopDownView
-        m_TopDownView = asset.FindActionMap("TopDownView", throwIfNotFound: true);
-        m_TopDownView_Move = m_TopDownView.FindAction("Move", throwIfNotFound: true);
-        // SideView
-        m_SideView = asset.FindActionMap("SideView", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_XZ_TopDown_Activate = m_Player.FindAction("XZ_TopDown_Activate", throwIfNotFound: true);
+        m_Player_XY_Side_Activate = m_Player.FindAction("XY_Side_Activate", throwIfNotFound: true);
+        m_Player_ZY_Side_Activate = m_Player.FindAction("ZY_Side_Activate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -222,94 +288,80 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // TopDownView
-    private readonly InputActionMap m_TopDownView;
-    private List<ITopDownViewActions> m_TopDownViewActionsCallbackInterfaces = new List<ITopDownViewActions>();
-    private readonly InputAction m_TopDownView_Move;
-    public struct TopDownViewActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_XZ_TopDown_Activate;
+    private readonly InputAction m_Player_XY_Side_Activate;
+    private readonly InputAction m_Player_ZY_Side_Activate;
+    public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
-        public TopDownViewActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_TopDownView_Move;
-        public InputActionMap Get() { return m_Wrapper.m_TopDownView; }
+        public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @XZ_TopDown_Activate => m_Wrapper.m_Player_XZ_TopDown_Activate;
+        public InputAction @XY_Side_Activate => m_Wrapper.m_Player_XY_Side_Activate;
+        public InputAction @ZY_Side_Activate => m_Wrapper.m_Player_ZY_Side_Activate;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(TopDownViewActions set) { return set.Get(); }
-        public void AddCallbacks(ITopDownViewActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void AddCallbacks(IPlayerActions instance)
         {
-            if (instance == null || m_Wrapper.m_TopDownViewActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_TopDownViewActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @XZ_TopDown_Activate.started += instance.OnXZ_TopDown_Activate;
+            @XZ_TopDown_Activate.performed += instance.OnXZ_TopDown_Activate;
+            @XZ_TopDown_Activate.canceled += instance.OnXZ_TopDown_Activate;
+            @XY_Side_Activate.started += instance.OnXY_Side_Activate;
+            @XY_Side_Activate.performed += instance.OnXY_Side_Activate;
+            @XY_Side_Activate.canceled += instance.OnXY_Side_Activate;
+            @ZY_Side_Activate.started += instance.OnZY_Side_Activate;
+            @ZY_Side_Activate.performed += instance.OnZY_Side_Activate;
+            @ZY_Side_Activate.canceled += instance.OnZY_Side_Activate;
         }
 
-        private void UnregisterCallbacks(ITopDownViewActions instance)
+        private void UnregisterCallbacks(IPlayerActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @XZ_TopDown_Activate.started -= instance.OnXZ_TopDown_Activate;
+            @XZ_TopDown_Activate.performed -= instance.OnXZ_TopDown_Activate;
+            @XZ_TopDown_Activate.canceled -= instance.OnXZ_TopDown_Activate;
+            @XY_Side_Activate.started -= instance.OnXY_Side_Activate;
+            @XY_Side_Activate.performed -= instance.OnXY_Side_Activate;
+            @XY_Side_Activate.canceled -= instance.OnXY_Side_Activate;
+            @ZY_Side_Activate.started -= instance.OnZY_Side_Activate;
+            @ZY_Side_Activate.performed -= instance.OnZY_Side_Activate;
+            @ZY_Side_Activate.canceled -= instance.OnZY_Side_Activate;
         }
 
-        public void RemoveCallbacks(ITopDownViewActions instance)
+        public void RemoveCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_TopDownViewActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(ITopDownViewActions instance)
+        public void SetCallbacks(IPlayerActions instance)
         {
-            foreach (var item in m_Wrapper.m_TopDownViewActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_TopDownViewActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public TopDownViewActions @TopDownView => new TopDownViewActions(this);
-
-    // SideView
-    private readonly InputActionMap m_SideView;
-    private List<ISideViewActions> m_SideViewActionsCallbackInterfaces = new List<ISideViewActions>();
-    public struct SideViewActions
-    {
-        private @PlayerInputActions m_Wrapper;
-        public SideViewActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputActionMap Get() { return m_Wrapper.m_SideView; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(SideViewActions set) { return set.Get(); }
-        public void AddCallbacks(ISideViewActions instance)
-        {
-            if (instance == null || m_Wrapper.m_SideViewActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_SideViewActionsCallbackInterfaces.Add(instance);
-        }
-
-        private void UnregisterCallbacks(ISideViewActions instance)
-        {
-        }
-
-        public void RemoveCallbacks(ISideViewActions instance)
-        {
-            if (m_Wrapper.m_SideViewActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(ISideViewActions instance)
-        {
-            foreach (var item in m_Wrapper.m_SideViewActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_SideViewActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public SideViewActions @SideView => new SideViewActions(this);
-    public interface ITopDownViewActions
+    public PlayerActions @Player => new PlayerActions(this);
+    public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-    }
-    public interface ISideViewActions
-    {
+        void OnXZ_TopDown_Activate(InputAction.CallbackContext context);
+        void OnXY_Side_Activate(InputAction.CallbackContext context);
+        void OnZY_Side_Activate(InputAction.CallbackContext context);
     }
 }
