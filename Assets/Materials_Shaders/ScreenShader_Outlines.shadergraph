@@ -1120,7 +1120,7 @@
                 "m_Node": {
                     "m_Id": "7d8eb27bd9d94b0db7f3b14f6ec3765f"
                 },
-                "m_SlotId": 1
+                "m_SlotId": 2
             }
         },
         {
@@ -3177,7 +3177,7 @@
     "m_ObjectId": "517eaa525ac94e3e8a9abcfb1a3398e5",
     "m_Version": 0,
     "m_fullscreenMode": 0,
-    "m_BlendMode": 3,
+    "m_BlendMode": 0,
     "m_SrcColorBlendMode": 0,
     "m_DstColorBlendMode": 1,
     "m_ColorBlendOperation": 0,
