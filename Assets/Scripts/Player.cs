@@ -72,7 +72,10 @@ public class Player : MonoBehaviour
             transform.position = navMeshHit.position;
         }
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(facingDirection), Time.deltaTime * rotationSpeed);
+        if (facingDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(facingDirection), Time.deltaTime * rotationSpeed);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

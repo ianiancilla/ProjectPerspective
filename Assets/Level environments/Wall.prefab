@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3675669474295343726}
   - component: {fileID: 3362669759170034392}
   - component: {fileID: 5180627020109041716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,54 +196,54 @@ MonoBehaviour:
   m_SharedTextures: []
   m_Positions:
   - {x: -1, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: -1, y: 5, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: -2}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: 5, z: -2}
-  - {x: 0, y: 0, z: -2}
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 10, z: 0}
+  - {x: 1, y: 10, z: 0}
+  - {x: 1, y: 0, z: 0}
+  - {x: 1, y: 0, z: -2}
+  - {x: 1, y: 10, z: 0}
+  - {x: 1, y: 10, z: -2}
+  - {x: 1, y: 0, z: -2}
   - {x: -1, y: 0, z: -2}
-  - {x: 0, y: 5, z: -2}
-  - {x: -1, y: 5, z: -2}
+  - {x: 1, y: 10, z: -2}
+  - {x: -1, y: 10, z: -2}
   - {x: -1, y: 0, z: -2}
   - {x: -1, y: 0, z: 0}
-  - {x: -1, y: 5, z: -2}
-  - {x: -1, y: 5, z: 0}
-  - {x: -1, y: 5, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: -1, y: 5, z: -2}
-  - {x: 0, y: 5, z: -2}
+  - {x: -1, y: 10, z: -2}
+  - {x: -1, y: 10, z: 0}
+  - {x: -1, y: 10, z: 0}
+  - {x: 1, y: 10, z: 0}
+  - {x: -1, y: 10, z: -2}
+  - {x: 1, y: 10, z: -2}
   - {x: -1, y: 0, z: -2}
-  - {x: 0, y: 0, z: -2}
+  - {x: 1, y: 0, z: -2}
   - {x: -1, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  - {x: 1, y: 0, z: 0}
   m_Textures0:
   - {x: 1, y: 0}
-  - {x: 0, y: 0}
-  - {x: 1, y: 5}
-  - {x: 0, y: 5}
+  - {x: -1, y: 0}
+  - {x: 1, y: 10}
+  - {x: -1, y: 10}
   - {x: 0, y: 0}
   - {x: -2, y: 0}
-  - {x: 0, y: 5}
-  - {x: -2, y: 5}
-  - {x: 0, y: 0}
+  - {x: 0, y: 10}
+  - {x: -2, y: 10}
+  - {x: 1, y: 0}
   - {x: -1, y: 0}
-  - {x: 0, y: 5}
-  - {x: -1, y: 5}
+  - {x: 1, y: 10}
+  - {x: -1, y: 10}
   - {x: 2, y: 0}
   - {x: 0, y: 0}
-  - {x: 2, y: 5}
-  - {x: 0, y: 5}
+  - {x: 2, y: 10}
+  - {x: 0, y: 10}
   - {x: -1, y: 0}
-  - {x: 0, y: 0}
-  - {x: -1, y: -2}
-  - {x: 0, y: -2}
-  - {x: 1, y: -2}
-  - {x: 0, y: -2}
   - {x: 1, y: 0}
-  - {x: 0, y: 0}
+  - {x: -1, y: -2}
+  - {x: 1, y: -2}
+  - {x: 1, y: -2}
+  - {x: -1, y: -2}
+  - {x: 1, y: 0}
+  - {x: -1, y: 0}
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1685
+  m_VersionIndex: 1706
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
