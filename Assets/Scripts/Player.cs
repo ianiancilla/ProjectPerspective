@@ -7,6 +7,8 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 7f;
+    [SerializeField] float rotationSpeed = 15f;
+
 
     // cache
     PlayPerspective playPerspective;
@@ -70,7 +72,7 @@ public class Player : MonoBehaviour
             transform.position = navMeshHit.position;
         }
 
-        transform.forward = Vector3.Slerp(transform.forward, facingDirection, Time.deltaTime * moveSpeed);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(facingDirection), Time.deltaTime * rotationSpeed);
     }
 
     private void OnTriggerEnter(Collider other)
