@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
             return;
         }
 
+        isWalking = true;
+
         Perspective perspective = playPerspective.GetCurrentPerspective();
 
         Vector3 moveDirection = Vector3.zero;
@@ -85,4 +87,6 @@ public class Player : MonoBehaviour
             Debug.Log("Level cleared!");
         }
     }
+
+    public bool IsWalking() => isWalking;
 }
