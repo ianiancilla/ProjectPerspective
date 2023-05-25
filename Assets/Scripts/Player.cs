@@ -35,11 +35,13 @@ public class Player : MonoBehaviour
     {
         Vector2 inputVector = playerInput.GetMovementVector();
 
-        if (inputVector == Vector2.zero)
+        if (inputVector == Vector2.zero
+            || playPerspective.GetCurrentPerspective() == Perspective.XZ_TopDown)    // let's try removing top-down movement!
         {
             isWalking = false;
             return;
         }
+        isWalking = true;
 
         Perspective perspective = playPerspective.GetCurrentPerspective();
 
@@ -47,10 +49,9 @@ public class Player : MonoBehaviour
 
         switch (perspective)
         {
-            case Perspective.XZ_TopDown:
-                return;
-                moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
-                break;
+            //case Perspective.XZ_TopDown:
+            //    moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
+            //    break;
             case Perspective.XY_Side:
                 moveDirection = new Vector3(-inputVector.x, 0, 0).normalized; // because camera is on the X+ side
                 break;
@@ -58,8 +59,6 @@ public class Player : MonoBehaviour
                 moveDirection = new Vector3(0, 0, inputVector.x).normalized;
                 break;
         }
-
-        isWalking = true;
 
         // move
         Vector3 goalPosition = transform.position + (moveDirection * moveSpeed * Time.deltaTime);
