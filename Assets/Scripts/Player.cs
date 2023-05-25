@@ -34,16 +34,17 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = playerInput.GetMovementVector();
+        Perspective perspective = playPerspective.GetCurrentPerspective();
+
 
         if (inputVector == Vector2.zero
-            || playPerspective.GetCurrentPerspective() == Perspective.XZ_TopDown)    // let's try removing top-down movement!
+            || perspective == Perspective.XZ_TopDown)    // let's try removing top-down movement!
         {
             isWalking = false;
             return;
         }
         isWalking = true;
 
-        Perspective perspective = playPerspective.GetCurrentPerspective();
 
         Vector3 moveDirection = Vector3.zero;
 

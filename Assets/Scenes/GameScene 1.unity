@@ -1076,7 +1076,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 746899840}
+      objectReference: {fileID: 1195207843}
     - target: {fileID: 5032270582707259068, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
         type: 3}
       propertyPath: near clip plane
@@ -5486,6 +5486,53 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1195207842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195207843}
+  - component: {fileID: 1195207844}
+  m_Layer: 0
+  m_Name: TopDownCameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195207843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195207842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 746899840}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195207844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195207842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776129fd3cac97b49a5e798409344281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  snapBackSpeed: 2
+  maxDistanceFromPlayer: 10
 --- !u!43 &1233277927
 Mesh:
   m_ObjectHideFlags: 0
@@ -6482,7 +6529,11 @@ PrefabInstance:
       objectReference: {fileID: 1967572418}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5359641918742887298, guid: 8d722cf2a501c384592fe7a8e0e79be1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1195207843}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d722cf2a501c384592fe7a8e0e79be1, type: 3}
 --- !u!1 &1506050141
