@@ -41,8 +41,6 @@ public class Player : MonoBehaviour
             return;
         }
 
-        isWalking = true;
-
         Perspective perspective = playPerspective.GetCurrentPerspective();
 
         Vector3 moveDirection = Vector3.zero;
@@ -50,6 +48,7 @@ public class Player : MonoBehaviour
         switch (perspective)
         {
             case Perspective.XZ_TopDown:
+                return;
                 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
                 break;
             case Perspective.XY_Side:
@@ -59,7 +58,9 @@ public class Player : MonoBehaviour
                 moveDirection = new Vector3(0, 0, inputVector.x).normalized;
                 break;
         }
- 
+
+        isWalking = true;
+
         // move
         Vector3 goalPosition = transform.position + (moveDirection * moveSpeed * Time.deltaTime);
         Vector3 facingDirection = moveDirection;
