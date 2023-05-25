@@ -7,6 +7,8 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 7f;
+    [SerializeField] float rotationSpeed = 15f;
+
 
     // cache
     PlayPerspective playPerspective;
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
         switch (perspective)
         {
             case Perspective.XZ_TopDown:
+                return;
                 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
                 break;
             case Perspective.XY_Side:
@@ -55,7 +58,9 @@ public class Player : MonoBehaviour
                 moveDirection = new Vector3(0, 0, inputVector.x).normalized;
                 break;
         }
- 
+
+        isWalking = true;
+
         // move
         Vector3 goalPosition = transform.position + (moveDirection * moveSpeed * Time.deltaTime);
         Vector3 facingDirection = moveDirection;
@@ -70,7 +75,10 @@ public class Player : MonoBehaviour
             transform.position = navMeshHit.position;
         }
 
-        transform.forward = Vector3.Slerp(transform.forward, facingDirection, Time.deltaTime * moveSpeed);
+        if (facingDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(facingDirection), Time.deltaTime * rotationSpeed);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -80,4 +88,6 @@ public class Player : MonoBehaviour
             Debug.Log("Level cleared!");
         }
     }
+
+    public bool IsWalking() => isWalking;
 }
