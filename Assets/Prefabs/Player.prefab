@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5359641918742887298}
   - component: {fileID: 8635571462157365772}
   - component: {fileID: 4007622757418879889}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -31,8 +31,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3051349630663520417}
+  - {fileID: 6796680825480856018}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8635571462157365772
 MonoBehaviour:
@@ -82,7 +83,7 @@ GameObject:
   - component: {fileID: 3051349630663520417}
   - component: {fileID: 7897176117216331865}
   - component: {fileID: 4599975972735497962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +156,7 @@ GameObject:
   - component: {fileID: 2842219917803024637}
   - component: {fileID: 3942393237077869699}
   - component: {fileID: 5154405907528025929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9231,7 +9232,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3624
+  m_VersionIndex: 3612
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -9351,7 +9352,7 @@ GameObject:
   - component: {fileID: 7724456791378563597}
   - component: {fileID: 5673208220604262277}
   - component: {fileID: 7564634801060705581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9472,7 +9473,7 @@ GameObject:
   - component: {fileID: 2798062366675971348}
   - component: {fileID: 228538092166780644}
   - component: {fileID: 1936522244626514554}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13124,7 +13125,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3416
+  m_VersionIndex: 3404
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -13243,7 +13244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614191543174365633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13269,6 +13270,53 @@ Transform:
   m_Father: {fileID: 3051349630663520417}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5626564587900196301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6796680825480856018}
+  - component: {fileID: 3214631499064322354}
+  m_Layer: 7
+  m_Name: TopDownCameraTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6796680825480856018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626564587900196301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5359641918742887298}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3214631499064322354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626564587900196301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776129fd3cac97b49a5e798409344281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 7
+  snapBackSpeed: 2
+  maxDistanceFromPlayer: 10
 --- !u!1 &6473103659556055800
 GameObject:
   m_ObjectHideFlags: 0
@@ -13280,7 +13328,7 @@ GameObject:
   - component: {fileID: 7148220178024856597}
   - component: {fileID: 8537926927464194576}
   - component: {fileID: 203208829723129537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13402,7 +13450,7 @@ GameObject:
   - component: {fileID: 3039324764316875026}
   - component: {fileID: 6434618045143574319}
   - component: {fileID: 6538935117657291700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15893,7 +15941,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1173
+  m_VersionIndex: 1161
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -16014,7 +16062,7 @@ GameObject:
   - component: {fileID: 8217886241160535830}
   - component: {fileID: 1776817128451890612}
   - component: {fileID: 21444866412714446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Belt Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16135,7 +16183,7 @@ GameObject:
   - component: {fileID: 2651670097399346749}
   - component: {fileID: 2779141715323420435}
   - component: {fileID: 2459500969034108926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25180,7 +25228,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 945
+  m_VersionIndex: 933
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -25301,6 +25349,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Wheel
       objectReference: {fileID: 0}
+    - target: {fileID: 1344911015116026428, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1614916990128514046, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_RootOrder
@@ -25359,7 +25412,7 @@ PrefabInstance:
     - target: {fileID: 7601055779532846996, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1021
+      value: 1009
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25385,6 +25438,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Wheel (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1344911015116026428, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1614916990128514046, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_RootOrder
@@ -25443,7 +25501,7 @@ PrefabInstance:
     - target: {fileID: 7601055779532846996, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1024
+      value: 1030
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25469,6 +25527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Wheel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1344911015116026428, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1614916990128514046, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_RootOrder
@@ -25527,7 +25590,7 @@ PrefabInstance:
     - target: {fileID: 7601055779532846996, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1021
+      value: 1027
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25553,6 +25616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Wheel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1344911015116026428, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1614916990128514046, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_RootOrder
@@ -25611,7 +25679,7 @@ PrefabInstance:
     - target: {fileID: 7601055779532846996, guid: c8d0aa9ddbd2f0249abee3f41b67dff6,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 1021
+      value: 1027
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
