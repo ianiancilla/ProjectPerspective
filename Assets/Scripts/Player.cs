@@ -19,9 +19,6 @@ public class Player : MonoBehaviour
     PlayPerspective playPerspective;
     PlayerInput playerInput;
 
-    //// constants
-    //private const string GOAL_TAG = "Finish";
-
     // variables
     private bool wasWalking = false;
     private bool isWalking = false;
@@ -96,14 +93,6 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(facingDirection), Time.deltaTime * rotationSpeed);
         }
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.gameObject.tag == GOAL_TAG)
-    //    {
-    //        onLevelClear?.Invoke();
-    //    }
-    //}
 
     private bool WalkingStatusChangedSinceLastFrame()
     {
