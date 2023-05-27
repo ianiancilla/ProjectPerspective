@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     {
         playPerspective = FindObjectOfType<PlayPerspective>();
         playerInput = FindObjectOfType<PlayerInput>();
+
+        transform.forward = FindObjectOfType<LevelManager>().level.PlayerStartDirection();
     }
 
     void Update()
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour
             //    moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
             //    break;
             case Perspective.XY_Side:
-                moveDirection = new Vector3(-inputVector.x, 0, 0).normalized; // because camera is on the X+ side
+                moveDirection = new Vector3(inputVector.x, 0, 0).normalized;
                 break;
             case Perspective.YZ_Side:
                 moveDirection = new Vector3(0, 0, inputVector.x).normalized;

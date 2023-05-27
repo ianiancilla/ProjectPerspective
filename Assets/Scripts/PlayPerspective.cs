@@ -30,7 +30,8 @@ public class PlayPerspective : MonoBehaviour
 
     private void Start()
     {
-        ChangePerspective(Perspective.XZ_TopDown);
+        Perspective startingPerspective = FindObjectOfType<LevelManager>().level.StartingPerspective();
+        ChangePerspective(startingPerspective);
     }
 
     private void ChangePerspective (Perspective newPerspective)
