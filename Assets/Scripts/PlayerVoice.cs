@@ -56,4 +56,9 @@ public class PlayerVoice : MonoBehaviour
 
         timer = waitBetweenChirps + variation;
     }
+
+    public void ToggleActivation()
+    {
+        isActive = !isActive;
+    }
 }

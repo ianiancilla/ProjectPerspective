@@ -13,12 +13,14 @@ public class Player : MonoBehaviour
     public delegate void OnWalkingStatusChanged(bool isWalking);
     public static event OnWalkingStatusChanged onWalkingStatusChanged;
 
+    public event Action onLevelClear;
+
     // cache
     PlayPerspective playPerspective;
     PlayerInput playerInput;
 
-    // constants
-    private const string GOAL_TAG = "Finish";
+    //// constants
+    //private const string GOAL_TAG = "Finish";
 
     // variables
     private bool wasWalking = false;
@@ -95,13 +97,13 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == GOAL_TAG)
-        {
-            Debug.Log("Level cleared!");
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.tag == GOAL_TAG)
+    //    {
+    //        onLevelClear?.Invoke();
+    //    }
+    //}
 
     private bool WalkingStatusChangedSinceLastFrame()
     {
