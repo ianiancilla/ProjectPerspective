@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 7f;
     [SerializeField] float rotationSpeed = 15f;
 
+    public delegate void OnWalkingStatusChanged(bool isWalking);
+    public static event OnWalkingStatusChanged onWalkingStatusChanged;
 
     // cache
     PlayPerspective playPerspective;
@@ -18,6 +21,7 @@ public class Player : MonoBehaviour
     private const string GOAL_TAG = "Finish";
 
     // variables
+    private bool wasWalking = false;
     private bool isWalking = false;
 
     private void Start()
@@ -30,7 +34,15 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        wasWalking = isWalking;
+
         HandleMovement();
+
+        if (WalkingStatusChangedSinceLastFrame())
+        {
+
+            onWalkingStatusChanged?.Invoke(isWalking);
+        }
     }
 
     private void HandleMovement()
@@ -91,5 +103,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    public bool IsWalking() => isWalking;
+    private bool WalkingStatusChangedSinceLastFrame()
+    {
+        return isWalking != wasWalking;
+    }
 }

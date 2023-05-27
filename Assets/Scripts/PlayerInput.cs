@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+    [SerializeField] bool isInputAccepted = true;
+
     private PlayerInputActions playerInputActions;
 
     // events
@@ -33,23 +35,31 @@ public class PlayerInput : MonoBehaviour
 
     private void OnXZ_TopDown_Activate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        if (!isInputAccepted) { return; }
         onPerspectiveChangeInput?.Invoke(Perspective.XZ_TopDown);
     }
 
     private void OnZY_Side_Activate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        if (!isInputAccepted) { return; }
         onPerspectiveChangeInput?.Invoke(Perspective.YZ_Side);
     }
 
     private void OnXY_Side_Activate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        if (!isInputAccepted) { return; }
         onPerspectiveChangeInput?.Invoke(Perspective.XY_Side);
     }
 
     public Vector2 GetMovementVector()
     {
+        if (!isInputAccepted) { return Vector2.zero; }
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
         return inputVector;
     }
 
+    public void ToggleInputActivation()
+    {
+        isInputAccepted = !isInputAccepted;
+    }
 }

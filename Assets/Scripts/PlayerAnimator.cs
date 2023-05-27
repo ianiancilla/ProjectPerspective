@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,8 +16,18 @@ public class PlayerAnimator : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        animator.SetBool(IS_WALKING, player.IsWalking());
+        Player.onWalkingStatusChanged += OnWalkingStatusChanged;
+    }
+
+    private void OnDisable()
+    {
+        Player.onWalkingStatusChanged -= OnWalkingStatusChanged;
+    }
+
+    private void OnWalkingStatusChanged(bool isWalking)
+    {
+        animator.SetBool(IS_WALKING, isWalking);
     }
 }
