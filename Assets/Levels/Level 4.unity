@@ -10599,16 +10599,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 583182048556044603, guid: 47a4e11d2b0a7094e914143585e7d3a5,
-        type: 3}
-      propertyPath: waitTime
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
-        type: 3}
-      propertyPath: m_text
-      value: 'space / Y : top-down view'
-      objectReference: {fileID: 0}
     - target: {fileID: 3437543555127148125, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -10662,16 +10652,6 @@ PrefabInstance:
     - target: {fileID: 3437543555127148125, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3750884763755476446, guid: 47a4e11d2b0a7094e914143585e7d3a5,
-        type: 3}
-      propertyPath: m_Name
-      value: TopDownView
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705803497260461920, guid: 47a4e11d2b0a7094e914143585e7d3a5,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6083336047527380317, guid: 47a4e11d2b0a7094e914143585e7d3a5,

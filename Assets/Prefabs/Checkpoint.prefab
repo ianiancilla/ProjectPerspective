@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4246527562981326277}
   - component: {fileID: 9024443104795579483}
   m_Layer: 5
-  m_Name: ChangePerspective
+  m_Name: TopDownView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,12 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'change perspective:
-
-    Q / ZL - look at XY plane
-
-    E / ZR - look
-    at ZY plane'
+  m_text: 'space / Y : top-down view'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d28daf289a94684cb7b92a9c406771f, type: 2}
   m_sharedMaterial: {fileID: -1465401699994882013, guid: 7d28daf289a94684cb7b92a9c406771f,
@@ -84,7 +79,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.9960785, g: 0.9960785, b: 0.8862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -342,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3034173d32786684f8565a7755dd1902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 3
+  waitTime: 15
   objectToToggle: {fileID: 4705803497260461920}
   audioClip: {fileID: 0}
+  hasTriggerCollider: 0

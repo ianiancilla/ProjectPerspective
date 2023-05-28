@@ -6156,8 +6156,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 583182048556044603, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
+      propertyPath: waitTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 583182048556044603, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
       propertyPath: hasTriggerCollider
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_text
+      value: 'change camera direction
+
+        Q / LT: look at XY plane
+
+        E
+        / RT: look at ZY plane'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.8862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.9960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4293066494
       objectReference: {fileID: 0}
     - target: {fileID: 3437543555127148125, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
@@ -6213,6 +6248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705803497260461920, guid: 47a4e11d2b0a7094e914143585e7d3a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6083336047527380317, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
