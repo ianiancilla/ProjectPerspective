@@ -662,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 1855480840010364044, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
         type: 3}
       propertyPath: m_Lens.NearClipPlane
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2731158220627241846, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
         type: 3}
@@ -684,11 +684,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 5478279018903833073}
-    - target: {fileID: 5881308063951026347, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
-        type: 3}
-      propertyPath: m_Lens.NearClipPlane
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -30,7 +30,7 @@ Transform:
   m_Children:
   - {fileID: 8536207652003485487}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5278264283040132083
 GameObject:
@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5278264283040132083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 1}
+  m_LocalPosition: {x: 1, y: 2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -271,7 +271,31 @@ MonoBehaviour:
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
-  m_Colors: []
+  m_Colors:
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
+  - {r: 1, g: 0.008163896, b: 0, a: 1}
   m_UnwrapParameters:
     m_HardAngle: 88
     m_PackMargin: 20
@@ -280,7 +304,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 853
+  m_VersionIndex: 859
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -332,7 +356,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 196e18b5fff9e6e4bb74c76d340bd1c2, type: 2}
+  - {fileID: 2100000, guid: e2d1fcc6a7f932943906dc8151ad30a6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
