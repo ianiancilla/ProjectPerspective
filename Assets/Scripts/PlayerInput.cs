@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -12,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     public delegate void OnPerspectiveChangeInput(Perspective perspective);
     public static event OnPerspectiveChangeInput onPerspectiveChangeInput;
 
+    public UnityEvent OnOpenMenu;
 
     private void Awake()
     {
@@ -24,6 +28,7 @@ public class PlayerInput : MonoBehaviour
         playerInputActions.Player.XY_Side_Activate.performed += OnXY_Side_Activate_performed;
         playerInputActions.Player.ZY_Side_Activate.performed += OnZY_Side_Activate_performed;
         playerInputActions.Player.XZ_TopDown_Activate.performed += OnXZ_TopDown_Activate_performed;
+        playerInputActions.Player.OpenMenu.performed += OnOpenMenu_performed;
     }
 
     private void OnDisable()
@@ -31,6 +36,7 @@ public class PlayerInput : MonoBehaviour
         playerInputActions.Player.XY_Side_Activate.performed -= OnXY_Side_Activate_performed;
         playerInputActions.Player.ZY_Side_Activate.performed -= OnZY_Side_Activate_performed;
         playerInputActions.Player.XZ_TopDown_Activate.performed -= OnXZ_TopDown_Activate_performed;
+        playerInputActions.Player.OpenMenu.performed -= OnOpenMenu_performed;
     }
 
     private void OnXZ_TopDown_Activate_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
@@ -51,6 +57,11 @@ public class PlayerInput : MonoBehaviour
         onPerspectiveChangeInput?.Invoke(Perspective.XY_Side);
     }
 
+    private void OnOpenMenu_performed(InputAction.CallbackContext obj)
+    {
+        OnOpenMenu?.Invoke();
+    }
+
     public Vector2 GetMovementVector()
     {
         if (!isInputAccepted) { return Vector2.zero; }
@@ -61,5 +72,15 @@ public class PlayerInput : MonoBehaviour
     public void ToggleInputActivation()
     {
         isInputAccepted = !isInputAccepted;
+    }
+
+    public void ActivateInput()
+    {
+        isInputAccepted = true;
+    }
+
+    public void DeactivateInput()
+    {
+        isInputAccepted = false;
     }
 }
