@@ -5,10 +5,18 @@ using UnityEngine;
 public class Toggle : MonoBehaviour
 {
     [SerializeField] MonoBehaviour componentToToggle;
+    [SerializeField] GameObject gameObjectToToggle;
 
     public void ToggleComponent()
     {
-        componentToToggle.enabled = !componentToToggle.enabled;
+        if (componentToToggle != null)
+        {
+            componentToToggle.enabled = !componentToToggle.enabled;
+        }
+        if (gameObjectToToggle != null)
+        {
+            gameObjectToToggle.SetActive(!gameObjectToToggle.activeSelf);
+        }
     }
 
     public void EnableComponent()
@@ -17,6 +25,10 @@ public class Toggle : MonoBehaviour
         {
             componentToToggle.enabled = true;
         }
+        if (gameObjectToToggle != null)
+        {
+            gameObjectToToggle.SetActive(true);
+        }
     }
 
     public void DisableComponent()
@@ -24,6 +36,10 @@ public class Toggle : MonoBehaviour
         if (componentToToggle != null)
         {
             componentToToggle.enabled = false;
+        }
+        if (gameObjectToToggle != null)
+        {
+            gameObjectToToggle.SetActive(false);
         }
     }
 }
