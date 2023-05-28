@@ -59,6 +59,7 @@ public class PlayerInput : MonoBehaviour
 
     private void OnOpenMenu_performed(InputAction.CallbackContext obj)
     {
+        if (!isInputAccepted) { return; }
         OnOpenMenu?.Invoke();
     }
 

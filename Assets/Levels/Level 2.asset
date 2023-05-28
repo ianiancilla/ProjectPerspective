@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5d538fdec5cb7d4195f6f6be9ea04e9, type: 3}
-  m_Name: Level1
+  m_Name: Level 2
   m_EditorClassIdentifier: 
   startingPerspective: 1
   playerStartDirection: {x: 0, y: 0, z: -1}
+  goalPosition: {x: 8, y: 0, z: 3}

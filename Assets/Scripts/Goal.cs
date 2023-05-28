@@ -9,6 +9,12 @@ public class Goal : MonoBehaviour
 
     // constants
     private const string PLAYER_TAG = "Player";
+
+    private void Start()
+    {
+        transform.position = FindObjectOfType<LevelManager>().level.GoalPosition();
+    }
+
     private void OnTriggerEnter(Collider other)
     
     {
