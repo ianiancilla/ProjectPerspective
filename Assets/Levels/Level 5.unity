@@ -8784,6 +8784,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.7216981
+      objectReference: {fileID: 0}
+    - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.90395856
+      objectReference: {fileID: 0}
+    - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5851082195457817926}
@@ -8915,6 +8930,21 @@ PrefabInstance:
     - target: {fileID: 6165764772674292730, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.7216981
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.90395856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
@@ -12038,6 +12068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514751837864183536, guid: 7ed34ef5e7dba4943b14b536cdcd553a,
+        type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

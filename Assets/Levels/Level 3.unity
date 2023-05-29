@@ -8071,6 +8071,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 461482982107841411}
+    - target: {fileID: 5032270582707259068, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
+        type: 3}
+      propertyPath: orthographic size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5881308063951026347, guid: 1a3cd5f32a6c22d47b460ace2a0dc59b,
         type: 3}
       propertyPath: m_Follow
@@ -8300,7 +8305,7 @@ PrefabInstance:
     - target: {fileID: 5170029118719640738, guid: fec30a87d8e568649bf90f26901130a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5170029118719640738, guid: fec30a87d8e568649bf90f26901130a4,
         type: 3}
