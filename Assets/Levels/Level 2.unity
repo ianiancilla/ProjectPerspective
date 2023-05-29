@@ -4026,10 +4026,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1237032837}
+    - target: {fileID: 790451522540083642, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 1044517956198111505, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
       propertyPath: m_Name
       value: GameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243958418913288554, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3804355165893831305, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
@@ -4040,6 +4055,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1553746886}
+    - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActivateInput
       objectReference: {fileID: 0}
     - target: {fileID: 7245755254751067292, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
@@ -4181,6 +4206,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a464021178f346147948d528e9c03d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1282373003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2218495546130117219, guid: d1c23aad00d980e428b166ccdecf12ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282373001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282373004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6977553839486871671, guid: d1c23aad00d980e428b166ccdecf12ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 1282373001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd138ba2bffc82a438d12a86c9516cad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1347850588
@@ -4676,6 +4719,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4832493954903573127, guid: 7ed34ef5e7dba4943b14b536cdcd553a,
+        type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1282373003}
     - target: {fileID: 5111847425224323641, guid: 7ed34ef5e7dba4943b14b536cdcd553a,
         type: 3}
       propertyPath: m_Name
@@ -6167,12 +6215,12 @@ PrefabInstance:
     - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
       propertyPath: m_text
-      value: 'change camera direction
+      value: 'change perspective:
 
-        Q / LT: look at XY plane
+        Q / LT - look at XY plane
 
-        E
-        / RT: look at ZY plane'
+        E /
+        RT - look at ZY plane'
       objectReference: {fileID: 0}
     - target: {fileID: 2508620393738116812, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
@@ -6252,7 +6300,7 @@ PrefabInstance:
     - target: {fileID: 4705803497260461920, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6083336047527380317, guid: 47a4e11d2b0a7094e914143585e7d3a5,
         type: 3}
@@ -6295,7 +6343,7 @@ PrefabInstance:
     - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
         type: 3}
       propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
         type: 3}
@@ -6309,6 +6357,11 @@ PrefabInstance:
       objectReference: {fileID: 1613565664}
     - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
         type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1282373004}
+    - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
+        type: 3}
       propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleInputActivation
       objectReference: {fileID: 0}
@@ -6316,6 +6369,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ToggleActivation
+      objectReference: {fileID: 0}
+    - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ToggleComponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Toggle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 503756694794379446, guid: 307ab6d92fdccc845ad3222b01fecae1,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2805247236211003011, guid: 307ab6d92fdccc845ad3222b01fecae1,
         type: 3}
