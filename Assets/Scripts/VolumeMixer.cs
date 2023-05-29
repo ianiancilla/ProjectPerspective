@@ -24,6 +24,6 @@ public class VolumeMixer : MonoBehaviour
 
     public void ApplyVolume()
     {
-        AudioListener.volume = PlayerPrefs.GetFloat(VOLUME_PREF, 1f);
+        AudioListener.volume = PlayerPrefs.GetFloat(VOLUME_PREF, 0.5f);
     }
 }
