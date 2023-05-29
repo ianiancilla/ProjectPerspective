@@ -1216,7 +1216,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837722
+  m_Name: pb_Mesh-6436916
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2026,7 +2026,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837764
+  m_Name: pb_Mesh-6436958
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2386,7 +2386,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837736
+  m_Name: pb_Mesh-6436930
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -2753,7 +2753,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837750
+  m_Name: pb_Mesh-6436944
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3110,7 +3110,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837778
+  m_Name: pb_Mesh-6436972
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -3275,7 +3275,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837806
+  m_Name: pb_Mesh-6437000
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -4299,7 +4299,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-837792
+  m_Name: pb_Mesh-6436986
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -5411,6 +5411,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1063650939208675212, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672759755540717452, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -5843,6 +5848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coordinate_Helper
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129172642692956734, guid: fcdb635068328c6418a8b7ad9969dec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6478652992326026711, guid: fcdb635068328c6418a8b7ad9969dec2,
         type: 3}

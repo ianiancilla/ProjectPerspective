@@ -4041,6 +4041,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1063650939208675212, guid: d1c23aad00d980e428b166ccdecf12ad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2243958418913288554, guid: d1c23aad00d980e428b166ccdecf12ad,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag

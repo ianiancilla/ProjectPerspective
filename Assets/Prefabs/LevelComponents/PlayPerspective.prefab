@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1523729808921364856}
   - component: {fileID: 6627621577313551710}
+  - component: {fileID: 2819486080472050261}
   m_Layer: 0
   m_Name: PlayPerspective
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6627621577313551710
 MonoBehaviour:
@@ -44,3 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7a0059988ec18439afa0500ffa7b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2819486080472050261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4841626345161686683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a27ec9612280f44a54c88fb07f2575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emissionOnX: {r: 3.984314, g: 0, b: 0, a: 1}
+  emissionOnZ: {r: 0, g: 2.8885927, b: 4, a: 1}
+  emissionOnY: {r: 0.14859295, g: 4, b: 0, a: 0.78431374}
+  materials:
+  - {fileID: 2100000, guid: 196e18b5fff9e6e4bb74c76d340bd1c2, type: 2}
+  - {fileID: 2100000, guid: 16c32f3ab1f3fee4ab82318101473afe, type: 2}

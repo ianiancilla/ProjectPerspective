@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ProBuilder_Stairs
+  m_Name: ProBuilder_StairsGold
   m_Shader: {fileID: -6465566751694194690, guid: dee24000f8f69e149befa20eb04ab159,
     type: 3}
   m_Parent: {fileID: 0}
@@ -124,7 +124,7 @@ Material:
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color_Correction: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emission_Color: {r: 2.1185472, g: 0, b: 0, a: 1}
+    - _Emission_Color: {r: 1.4980392, g: 0.9804612, b: 0, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Pulse_Values: {r: 0, g: 2, b: 0, a: 0}
     - _Scrolling_Speed: {r: 0, g: 0, b: 0, a: 0}

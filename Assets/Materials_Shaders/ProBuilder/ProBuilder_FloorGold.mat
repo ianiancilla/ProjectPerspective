@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ProBuilder_Floor
+  m_Name: ProBuilder_FloorGold
   m_Shader: {fileID: -6465566751694194690, guid: dee24000f8f69e149befa20eb04ab159,
     type: 3}
   m_Parent: {fileID: 2100000, guid: 16c32f3ab1f3fee4ab82318101473afe, type: 2}
@@ -46,5 +46,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Emission_Color: {r: 2.1185472, g: 0, b: 0, a: 1}
+    - _Emission_Color: {r: 1.592, g: 1.0502199, b: 0, a: 1}
   m_BuildTextureStacks: []
